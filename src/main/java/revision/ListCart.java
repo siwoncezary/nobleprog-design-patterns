@@ -35,7 +35,7 @@ public class ListCart implements Cart{
     public Map<Product, Double> content() {
         //tradycyjna metoda grupowania
         Set<Product> products = new HashSet<>();
-        //dodajemy poe product do zbioru, aby otrzymać listę produktów bez powtórzeń
+        //dodajemy pole product do zbioru, aby otrzymać listę produktów bez powtórzeń
         for(CartItem item: items){
             products.add(item.product);
         }
