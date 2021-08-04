@@ -39,12 +39,50 @@ public class TictactoeBoard {
         int c = 0;
         int r = 0;
         for(String row: chars){
+            c = 0;
             for (char item: row.toCharArray()){
                 board[r][c] = Symbol.of(item);
+                c++;
             }
+            r++;
         }
         return new TictactoeBoard(board);
     }
+
+    public boolean isWinner(Symbol player){
+        for(int row = 0; row < SIZE; row++){
+            if (isWinnerInRow(player, row)){
+                return true;
+            }
+        }
+        for(int col = 0; col < SIZE; col++){
+            if (isWinnerInRow(player, col)){
+                return true;
+            }
+        }
+        return isDiagonal(player);
+    }
+
+    private boolean isWinnerInRow(Symbol player, int row){
+        int count = 0;
+        for(int c = 0; c < board.length; c++){
+            if (board[row][c] == player) {
+                count++;
+            }
+        }
+        return count == SIZE;
+    }
+
+    private boolean isWinnerInColumn(Symbol player, int column) {
+        //TODO uzupełnić
+        return false;
+    }
+
+    private boolean isDiagonal(Symbol player){
+        //TODO uzupełnić
+        return false;
+    }
+
 
     @Override
     public String toString() {
