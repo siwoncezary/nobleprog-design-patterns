@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Planasza gry 10 x 10
+ * Plansza gry 10 x 10
  */
 public class GameBoard {
     private List<GameObserver> observers = new ArrayList<>();

@@ -60,7 +60,7 @@ public class TictactoeBoard {
                 return true;
             }
         }
-        return isDiagonal(player);
+        return WinnerOnDiagonal(player);
     }
 
     private boolean isWinnerInRow(Symbol player, int row){
@@ -78,7 +78,7 @@ public class TictactoeBoard {
         return false;
     }
 
-    private boolean isDiagonal(Symbol player){
+    private boolean WinnerOnDiagonal(Symbol player){
         //TODO uzupełnić
         return false;
     }
