@@ -1,4 +1,4 @@
-#Wzorce projektowe
+# Wzorce projektowe
 1. Builder
 2. Command
 3. Decorator
